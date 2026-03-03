@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+.nav-active {
+  @apply text-blue-400 font-bold;
+}
+
+.nav-inactive {
+  @apply text-gray-300;
+}

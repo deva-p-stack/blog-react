@@ -16,10 +16,10 @@ return(
 
 {/* right side content */}
 <ul className=" hidden md:flex  space-x-10 py-2  text-lg text-white/50">
-  <li><NavLink to="/">Home</NavLink></li>
-  <li><NavLink to="/about">About</NavLink></li>
-  <li><NavLink to="/blog">Blog</NavLink></li>
-  <li><NavLink to="/contact">Contact</NavLink></li>
+  <li><NavLink className={({ isActive }) => isActive ? "nav-active" : "nav-inactive"} to="/">Home</NavLink></li>
+  <li><NavLink  className={({ isActive }) => isActive ? "nav-active" : "nav-inactive"} to="/about">About</NavLink></li>
+  <li><NavLink  className={({ isActive }) => isActive ? "nav-active" : "nav-inactive"} to="/blog">Blog</NavLink></li>
+  <li><NavLink  className={({ isActive }) => isActive ? "nav-active" : "nav-inactive"} to="/contact">Contact</NavLink></li>
 </ul>
 
 {/* three lines  */}
@@ -34,10 +34,10 @@ return(
  {open && (
       
         <ul className=" justify-center flex flex-col text-white/80 text-lg  hover:white/50 items-center w-full  gap-4 mt-4 md:hidden">
-          <li><NavLink to="/">Home</NavLink></li>
-          <li><NavLink to="/about">About</NavLink></li>
-          <li><NavLink to="/blog">Blog</NavLink></li>
-          <li><NavLink to="/contact">Contact</NavLink></li>
+          <li><NavLink  className={({ isActive }) => isActive ? "nav-active" : "nav-inactive"} to="/">Home</NavLink></li>
+          <li><NavLink  className={({ isActive }) => isActive ? "nav-active" : "nav-inactive"} to="/about">About</NavLink></li>
+          <li><NavLink  className={({ isActive }) => isActive ? "nav-active" : "nav-inactive"} to="/blog">Blog</NavLink></li>
+          <li><NavLink   className={({ isActive }) => isActive ? "nav-active" : "nav-inactive"} to="/contact">Contact</NavLink></li>
         </ul>
       )}
 

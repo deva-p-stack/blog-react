@@ -1,7 +1,11 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
 
 export default function Blog() {
+
+   useEffect(() => {
+      document.title = "Blog Content  Page"; 
+    }, []);
 
   const [blogs ] = useState(() => {
     const storedBlogs = localStorage.getItem("blogs");
@@ -19,7 +23,7 @@ export default function Blog() {
         <h3 className="text-lg">Sakthi Blog – Tamil Tech & Tips</h3>
 
         <div className="flex space-x-10">
-          <input className="bg-red-700 px-3 rounded-lg py-2 outline-none" type="search" />
+          <input className="bg-red-700 px-3 rounded-lg py-2 outline-none" type="search" aria-label="search" />
           <button className="px-5 py-2 bg-red-400 rounded-lg">Search</button>
 
           <Link to="/add-blog">

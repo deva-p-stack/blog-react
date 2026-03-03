@@ -1,7 +1,14 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
 
 export default function AddBlog(){
+
+
+     useEffect(() => {
+        document.title = "Add the  blog content"; 
+      }, []);
+
+    
 
 const [blog, setBlog] = useState({
   title: "",
@@ -24,6 +31,8 @@ const handledata = (e) => {
       const updatedBlogs = [...existingBlogs, blog];
 
  localStorage.setItem("blogs", JSON.stringify(updatedBlogs));
+
+ alert("Add the blog sucessfully!.....")
  
 }
 
@@ -50,7 +59,7 @@ return(
 
              <div className="flex flex-col py-1 space-x-3 ">
                 <label className="text-xs" htmlFor="date">Publish Date</label>
-                <input className="bg-red-400 outline-none rounded-lg py-2 px-3" type="text" name="date" id="date" aria-label="date" />
+                <input className="bg-red-400 outline-none rounded-lg py-2 px-3" type="date" name="date" id="date" aria-label="date" />
             </div>
 
 
